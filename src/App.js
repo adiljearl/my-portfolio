@@ -6,6 +6,7 @@ import Header from './Header.js';
 import About from './About.js';
 import Contact from './Contact.js';
 import Projects from './Projects.js';
+import PhotoGallery from './PhotoGallery.js';
 import Footer from './Footer.js';
 import SocialMediaLinks from './SocialMediaLinks.js';
 
@@ -36,6 +37,7 @@ import SocialMediaLinks from './SocialMediaLinks.js';
             <Header />
             <About />
             <Projects />
+            <PhotoGallery />
             <SocialMediaLinks />
             <Contact />
             <Footer />

@@ -1287,3 +1287,361 @@ footer .wrapper {
     padding-bottom: .8rem;
   }
 }
+
+
+
+
+
+/*****************
+ *****************
+ PHOTO GALLERY STYLES
+ *****************
+ *****************/
+
+#photo-gallery {
+  min-height: 100vh;
+  font-size: 1.4rem;
+  position: relative;
+  background: #252934;
+  background: linear-gradient(135deg, #252934 0%, #202736 100%);
+  margin-top: -10rem;
+  z-index: 2;
+  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+}
+
+#photo-gallery .gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 15rem 5rem 12rem;
+  color: #fafafa;
+}
+
+/* Heading */
+#photo-gallery .heading .title {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #fafafa;
+}
+
+#photo-gallery .heading .separator {
+  background: #f300b4;
+  width: 150px;
+  height: 2px;
+  margin: 1rem auto;
+}
+
+#photo-gallery .heading .subtitle {
+  font-size: 1.4rem;
+  text-align: center;
+  width: 70%;
+  margin: 2rem auto;
+  color: #fafafa;
+  line-height: 1.8rem;
+}
+
+/* Photos Grid */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin: 4rem 0;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(243, 0, 180, 0.3);
+}
+
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms;
+}
+
+.photo-item:hover .photo-image {
+  transform: scale(1.1);
+}
+
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: #fafafa;
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(100%);
+  transition: transform 300ms;
+}
+
+.photo-item:hover .photo-overlay {
+  transform: translateY(0);
+}
+
+.photo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #f300b4;
+}
+
+.photo-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Load More Button */
+.load-more-container {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.load-more-btn {
+  background: linear-gradient(135deg, #f300b4 0%, #c900a0 100%);
+  color: #fafafa;
+  border: none;
+  padding: 1.2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  box-shadow: 0 5px 15px rgba(243, 0, 180, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.load-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(243, 0, 180, 0.6);
+  background: linear-gradient(135deg, #c900a0 0%, #f300b4 100%);
+}
+
+.load-more-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(243, 0, 180, 0.4);
+}
+
+.gallery-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.gallery-footer p {
+  color: #aaa;
+  font-style: italic;
+}
+
+.gallery-stats {
+  color: #f300b4 !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+  font-size: 1.2rem !important;
+}
+
+/* Photo click hint */
+.photo-click-hint {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.photo-container {
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: modalFadeIn 300ms ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #252934;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: modalSlideIn 300ms ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: scale(0.8) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(243, 0, 180, 0.9);
+  color: #fafafa;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 200ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: #f300b4;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(243, 0, 180, 0.5);
+}
+
+.modal-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1f25;
+  min-height: 400px;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-info {
+  padding: 20px;
+  background: #252934;
+  color: #fafafa;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #f300b4;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.modal-description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1149px) {
+  .photos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 949px) {
+  #photo-gallery {
+    clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
+  }
+  
+  .photos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 649px) {
+  #photo-gallery .gallery-container {
+    padding: 12rem 2rem 8rem;
+  }
+  
+  .photos-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  
+  .photo-container {
+    height: 200px;
+  }
+  
+  .load-more-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  
+  .modal-image {
+    max-height: 60vh;
+  }
+  
+  .modal-info {
+    padding: 15px;
+  }
+  
+  .modal-title {
+    font-size: 1.4rem;
+  }
+  
+  .modal-description {
+    font-size: 1.2rem;
+  }
+}

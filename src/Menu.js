@@ -27,6 +27,11 @@ import './App.css';
               </a>
             </li>
             <li>
+              <a href="#photo-gallery" onClick={props.toggleMenu}>
+                PHOTO GALLERY
+              </a>
+            </li>
+            <li>
               <a href="#contact" onClick={props.toggleMenu}>
                 CONTACT
               </a>
