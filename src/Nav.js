@@ -11,8 +11,7 @@ const Nav = props => {
       <nav id="navbar">
         <div className="nav-wrapper">
           <p className="brand">
-            Adil
-            <strong>Ansari</strong>
+            Mohammad<strong>Adil</strong>
           </p>
           <a
             onClick={props.toggleMenu}
