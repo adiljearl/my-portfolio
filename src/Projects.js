@@ -91,6 +91,20 @@ import Corporate from './corporate';
                     Being an intern for six months, people thought of promoting me to the Software Engineer I position and after couple of months they gave me some more responsibilities and I got the designation of Software Engineer II.
                   </p>
                 </Corporate>
+                <Corporate
+                  title="Deltek"
+                  img={'Deltek.jpeg'}
+                  // tech="js node css"
+                  place="Company"
+                  link="https://deltek.com/"
+                >
+                  <p>
+                    Following the acquisition of Replicon by Deltek, I transitioned to continue my role as a Software Engineer at Deltek. This transition brought new opportunities to work with enterprise-level solutions and contribute to Deltek's comprehensive suite of project-based business software.
+                  </p>
+                  <p>
+                    At Deltek, I've been able to leverage my experience from Replicon while adapting to new technologies and methodologies, contributing to the integration and enhancement of time tracking and project management solutions within Deltek's broader ecosystem.
+                  </p>
+                </Corporate>
                 
               </div>
             </div>

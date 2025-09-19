@@ -4,7 +4,7 @@
  *****************
  *****************/
 
- #socialMedia {
+ #social-media {
 	min-height: 100vh;
 	font-size: 1.4rem;
 	position: relative;
@@ -14,168 +14,151 @@
 	z-index: 1;
   }
   
-  #socialMedia a,
-  #socialMedia a:visited {
+  #social-media a,
+  #social-media a:visited {
 	color: #f300b4;
   }
   
-  #socialMedia a:hover,
-  #socialMedia a:active {
+  #social-media a:hover,
+  #social-media a:active {
 	color: #252934;
   }
   
   /* Container */
-  #socialMedia .socialMedia-container {
+  #social-media .projects-container {
 	max-width: 1400px;
 	margin: 0 auto;
 	width: 100%;
 	padding: 12rem 5rem 8rem;
   }
+
+  /* Social Links Container */
+  .social-links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
+  }
   
+  /* Social Card Styles */
+  .social-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .social-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .social-icon {
+    font-size: 3rem;
+    color: #f300b4;
+    margin-bottom: 1rem;
+  }
+  
+  .social-card h4 {
+    font-size: 1.5rem;
+    color: #252934;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .social-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .social-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #f300b4, #e91e63);
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .social-btn:hover {
+    background: linear-gradient(135deg, #e91e63, #f300b4);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(243, 0, 180, 0.3);
+  }
+
   /* Heading */
-  #socialMedia .heading .title {
+  #social-media .heading .title {
 	text-align: center;
 	font-size: 2.4rem;
 	line-height: 2.4rem;
   }
   
-  #socialMedia .heading .separator {
+  #social-media .heading .separator {
 	background: #f300b4;
 	width: 150px;
 	height: 2px;
 	margin: 1rem auto;
   }
   
-  #socialMedia .heading .subtitle {
+  #social-media .heading .subtitle {
 	font-size: 1.4rem;
 	text-align: center;
 	width: 70%;
 	margin: 0 auto;
-	text-align: justify;
-  }
-  
-  /* Single Project */
-  #socialMedia .project {
-	margin: 1rem auto;
-	width: 70%;
-	padding: 2rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-gap: 2rem;
-  }
-  
-  /* Project Image */
-  #socialMedia .project .project-link {
-	display: block;
-	margin: auto 0;
-	color: #252934;
-	overflow: hidden;
-	text-align: center;
-	border-radius: 50%;
-	border: 1px solid #fafafa;
-	box-shadow: 0 20px 10px -10px #25293450;
-	transition: 300ms;
-  }
-  
-  #socialMedia .project .project-link:hover {
-	box-shadow: 0 50px 15px -30px #25293450;
-  }
-  
-  #socialMedia .project .project-link:hover > img {
-	filter: saturate(1);
-	transform: scale(1.05);
-  }
-  
-  #socialMedia .project .project-image {
-	width: 100%;
-	transform: scale(1.2);
-	filter: saturate(0);
-	transition: all 300ms;
-  }
-  
-  /* Project Details */
-  #socialMedia .project .project-details {
-	margin: auto 0;
-  }
-  
-  #socialMedia .project-details .project-tile {
-	font-size: 2rem;
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-bottom: 0;
-	color: #f300b4;
-  }
-  
-  /* Icons */
-  #socialMedia .project-details .icons {
-	margin: 0;
-	color: #252934;
-  }
-  
-  #socialMedia .project-details .icons i {
-	margin-right: .4rem;
-	font-weight: normal;
-	font-size: 1.4rem;
-  }
-  
-  /* Text */
-  #socialMedia .project-details small {
-	font-style: italic;
-  }
-  
-  #socialMedia .project-details p {
-	margin: 1rem 0;
-  }
-  
-  /* Buttons */
-  #socialMedia .project-details .buttons {
-	display: flex;
-	justify-content: space-between;
-  }
-  
-  #socialMedia .project-details .buttons a {
-	width: 49%;
-	padding: .5rem;
-	border: none;
-	border-bottom: 1px solid #f300b4;
-	color: #252934;
-	background: #fafafa;
-	font-size: 1.2rem;
 	text-align: center;
   }
   
-  #socialMedia .project-details .buttons a:hover {
-	background: #f300b4;
-	color: #fafafa;
-  }
-  #socialMedia .project-details .buttons i {
-	font-size: .8rem;
-	vertical-align: middle;
-	margin-left: .5rem;;
+  /* Responsive Design */
+  
+  @media only screen and (max-width: 768px) {
+    .social-links-container {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+    
+    #social-media .projects-container {
+      padding: 10rem 2rem 6rem;
+    }
+    
+    #social-media .heading .subtitle {
+      width: 90%;
+    }
+    
+    .social-card {
+      padding: 1.5rem;
+    }
+    
+    .social-icon {
+      font-size: 2.5rem;
+    }
   }
   
-  
-  @media only screen and (max-width: 1149px) {
-	#socialMedia .project {
-	  grid-template-columns: 1fr 2fr;
-	}
-  }
-  
-  @media only screen and (max-width: 949px) {
-	#socialMedia .project {
-	  grid-template-columns: 1fr;
-	}
-  }
-  
-  @media only screen and (max-width: 649px) {
-	#socialMedia {
-	  background: #f0f0f0;
-	}
-	#socialMedia .socialMedia-container {
-	  padding: 12rem 0 8rem;
-	}
-	#socialMedia .project {
-	  padding: 2rem 0;
-	}
+  @media only screen and (max-width: 480px) {
+    #social-media .projects-container {
+      padding: 8rem 1rem 4rem;
+    }
+    
+    .social-card {
+      padding: 1.2rem;
+    }
+    
+    #social-media .heading .title {
+      font-size: 2rem;
+    }
+    
+    #social-media .heading .subtitle {
+      font-size: 1.2rem;
+      width: 95%;
+    }
   }
